@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'login')}">
+
+
+<body>
+    <form method="post">
+        Amount : <input type="number" name="amnt" min="10" max="500" maxlength="4" placeholder="x10" step="10"
+        required=true/>
+        
+        <p>Please select the denomination:</p>
+          <input type="radio" id="50" name="denom" value="50" required>
+            <label for="50">50</label><br>
+          <input type="radio" id="20" name="denom" value="20">
+            <label for="20">20</label><br>  
+          <input type="radio" id="10" name="denom" value="10">
+            <label for="10">10</label><br><br>
+          <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
